@@ -10,7 +10,7 @@ class Item(Base):
     description = Column(Text)
     category = Column(String, index=True)
     price = Column(Float)
-    metadata = Column(JSON)
+    item_metadata = Column(JSON)
     vector_id = Column(String, unique=True, index=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
