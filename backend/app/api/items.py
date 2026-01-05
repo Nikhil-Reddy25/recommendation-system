@@ -57,7 +57,7 @@ async def create_item(
             description=item.description,
             category=item.category,
             price=item.price,
-            metadata=item.metadata,
+            item_metadata=item.metadata,
             vector_id=vector_id
         )
         db.add(db_item)
