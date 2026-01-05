@@ -29,7 +29,7 @@ class TestItemModel:
             description="A test product description",
             category="electronics",
             price=99.99,
-            metadata={"brand": "TestBrand"},
+            item_metadata={"brand": "TestBrand"},
             vector_id="vec_123"
         )
         test_db.add(item)
