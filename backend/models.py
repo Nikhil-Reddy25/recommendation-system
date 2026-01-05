@@ -24,7 +24,7 @@ class UserInteraction(Base):
     interaction_type = Column(String)  # view, click, purchase, rating
     interaction_value = Column(Float, nullable=True)  # for ratings
     timestamp = Column(DateTime(timezone=True), server_default=func.now())
-    metadata = Column(JSON, nullable=True)
+    interaction_metadata = Column(JSON, nullable=True)
 
 class Recommendation(Base):
     __tablename__ = "recommendations"
