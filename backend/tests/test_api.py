@@ -91,7 +91,7 @@ class TestInteractionsAPI:
             "item_id": 1,
             "interaction_type": "view",
             "interaction_value": None,
-            "metadata": {}
+            "interaction_metadata": {}
         }
         response = client.post("/api/v1/interactions", json=payload)
         # May fail due to database constraints, but should return proper status
