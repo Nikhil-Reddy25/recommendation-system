@@ -24,11 +24,12 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000", "http://localhost:8000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    allow_origins=["http://localhost:3000", "http://localhost:8000"],  # Restrict to specific origins
+
+    )
 # Include routers
 app.include_router(recommendations.router, prefix="/api/v1", tags=["recommendations"])
 app.include_router(items.router, prefix="/api/v1", tags=["items"])
